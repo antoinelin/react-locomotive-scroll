@@ -7,15 +7,21 @@
     "strict": true,
     "noUnusedLocals": false,
     "skipLibCheck": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "removeComments": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "target": "ESNext",
+    "target": "es5",
     "importHelpers": true,
     "jsx": "react-jsx",
     "lib": [
       "dom",
-      "dom.iterable",
-      "esnext"
+      "es5",
+      "es6"
     ],
     "typeRoots" : [
       "./node_modules/@types",

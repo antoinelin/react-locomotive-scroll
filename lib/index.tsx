@@ -1,8 +1,7 @@
 export type { LocomotiveScrollOptions, Scroll, ScrollInstance } from 'locomotive-scroll'
-export {
-  LocomotiveScrollContext,
+export { LocomotiveScrollContext, LocomotiveScrollProvider } from './LocomotiveScroll.context'
+export type {
   LocomotiveScrollContextValue,
-  LocomotiveScrollProvider,
   LocomotiveScrollProviderProps,
 } from './LocomotiveScroll.context'
 export { useLocomotiveScroll } from './useLocomotiveScroll.hook'

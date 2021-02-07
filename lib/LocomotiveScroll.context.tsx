@@ -42,7 +42,7 @@ export function LocomotiveScrollProvider({
         }
 
         LocomotiveScrollRef.current = new LocomotiveScroll({
-          el: dataScrollContainer ? dataScrollContainer : undefined,
+          el: dataScrollContainer ?? undefined,
           ...options,
         })
 
@@ -53,19 +53,14 @@ export function LocomotiveScrollProvider({
     })()
 
     return () => {
-      if (LocomotiveScrollRef.current) {
-        LocomotiveScrollRef.current.destroy()
-      }
-
+      LocomotiveScrollRef.current?.destroy()
       setIsReady(false)
     }
   }, [])
 
   useEffect(
     () => {
-      if (LocomotiveScrollRef.current) {
-        LocomotiveScrollRef.current.update()
-      }
+      LocomotiveScrollRef.current?.update()
     },
     watch ? [...watch, height] : [height]
   )
