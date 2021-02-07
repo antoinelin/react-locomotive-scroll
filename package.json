@@ -43,6 +43,9 @@
       "prettier --write"
     ]
   },
+  "dependencies": {
+    "use-resize-observer": "7.0.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
@@ -63,7 +66,6 @@
   },
   "peerDependencies": {
     "locomotive-scroll": "4.0.6",
-    "react": "17.0.1",
-    "use-resize-observer": "7.0.0"
+    "react": "17.0.1"
   }
 }
