@@ -14,12 +14,12 @@
     "jsx": "react-jsx",
     "lib": [
       "dom",
-      "es5",
-      "es6"
+      "dom.iterable",
+      "esnext"
     ],
     "typeRoots" : [
       "./node_modules/@types",
-      "./types"
+      "./lib/@types"
     ],
     "baseUrl": ".",
     "paths": {
@@ -28,7 +28,7 @@
   },
   "include": [
     "./lib/**/*"
-  ],
+, "@types"  ],
   "exclude": [
     "./module",
     "node_modules"

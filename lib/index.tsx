@@ -1,7 +1,8 @@
-const MyComponent: React.FC = () => {
-  return <>MyComponent</>
-}
-
-MyComponent.displayName = 'MyComponent'
-
-export default MyComponent
+export type { LocomotiveScrollOptions, Scroll, ScrollInstance } from 'locomotive-scroll'
+export {
+  LocomotiveScrollContext,
+  LocomotiveScrollContextValue,
+  LocomotiveScrollProvider,
+  LocomotiveScrollProviderProps,
+} from './LocomotiveScroll.context'
+export { useLocomotiveScroll } from './useLocomotiveScroll.hook'

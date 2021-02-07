@@ -21,13 +21,13 @@
   "scripts": {
     "build": "rm -rf ./module && tsc",
     "lint": "eslint --quiet",
-    "check-format": "prettier --list-different 'lib/**/*.ts?(x)'",
-    "test": "jest",
-    "prepare": "yarn lint && yarn check-format && yarn build"
+    "format": "prettier --debug-check lib/**/*.{ts,tsx}",
+    "prepare": "yarn lint && yarn format && yarn build",
+    "release": "dotenv release-it --"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && yarn check-format && lint-staged",
+      "pre-commit": "yarn lint && yarn format && lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
@@ -44,21 +44,26 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@types/react": "^17.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.14.2",
-    "@typescript-eslint/parser": "^4.14.2",
-    "commitizen": "^4.2.3",
-    "eslint": "^7.19.0",
-    "eslint-config-prettier": "^7.2.0",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1",
-    "prettier-plugin-organize-imports": "^1.1.1",
-    "typescript": "^4.1.3"
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@release-it/conventional-changelog": "^2.0.0",
+    "@types/react": "17.0.1",
+    "@typescript-eslint/eslint-plugin": "4.14.2",
+    "@typescript-eslint/parser": "4.14.2",
+    "commitizen": "4.2.3",
+    "dotenv-cli": "^4.0.0",
+    "eslint": "7.19.0",
+    "eslint-config-prettier": "7.2.0",
+    "husky": "4.3.8",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
+    "prettier-plugin-organize-imports": "1.1.1",
+    "release-it": "^14.3.0",
+    "typescript": "4.1.3"
   },
   "peerDependencies": {
-    "react": "^17.0.1"
+    "locomotive-scroll": "4.0.6",
+    "react": "17.0.1",
+    "use-resize-observer": "7.0.0"
   }
 }
