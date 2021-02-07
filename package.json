@@ -43,6 +43,9 @@
       "prettier --write"
     ]
   },
+  "dependencies": {
+    "use-resize-observer": "6.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
