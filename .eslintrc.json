@@ -1,0 +1,52 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "env": {
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "rules": {
+    "@typescript-eslint/triple-slash-reference": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/no-var-requires": 1,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-empty-function": [
+      2,
+      {
+        "allow": ["arrowFunctions"]
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      2,
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "no-console": [
+      2,
+      {
+        "allow": ["warn", "error"]
+      }
+    ]
+  },
+  "overrides": [{
+    "files": ["*.js"],
+    "rules": {
+      "@typescript-eslint/no-var-requires": "off"
+    }
+  }]
+}

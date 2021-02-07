@@ -1,0 +1,36 @@
+
+{
+  "compilerOptions": {
+    "outDir": "./module",
+    "sourceMap": false,
+    "declaration": true,
+    "strict": true,
+    "noUnusedLocals": false,
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "importHelpers": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "typeRoots" : [
+      "./node_modules/@types",
+      "./lib/@types"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*"]
+    }
+  },
+  "include": [
+    "./lib/**/*"
+, "@types"  ],
+  "exclude": [
+    "./module",
+    "node_modules"
+  ]
+}

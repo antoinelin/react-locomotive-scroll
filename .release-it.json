@@ -1,0 +1,19 @@
+{
+  "git": {
+    "requireBranch": "master",
+    "requireCleanWorkingDir": false,
+    "addFiles": ["package.json", "CHANGELOG.md"]
+  },
+  "npm": {
+    "publish": true
+  },
+  "github": {
+    "release": true
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md"
+    }
+  }
+}
