@@ -33,14 +33,22 @@ export function LocomotiveScrollProvider({
       try {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
 
+        const dataScrollContainer = document.querySelector('[data-scroll-container]')
+
+        if (!dataScrollContainer) {
+          console.warn(
+            `react-locomotive-scroll: [data-scroll-container] dataset was not found. You likely forgot to add it which will prevent Locomotive Scroll to work.`
+          )
+        }
+
         LocomotiveScrollRef.current = new LocomotiveScroll({
-          el: document.querySelector('[data-scroll-container]') ?? undefined,
+          el: dataScrollContainer ?? undefined,
           ...options,
         })
 
         setIsReady(true) // Re-render the context
       } catch (error) {
-        throw Error(`[SmoothScrollProvider]: ${error}`)
+        throw Error(`react-locomotive-scroll: ${error}`)
       }
     })()
 
