@@ -1,6 +1,6 @@
 {
   "name": "react-locomotive-scroll",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A locomotive-scroll React wrapper",
   "main": "module/index.js",
   "module": "module/index.js",
