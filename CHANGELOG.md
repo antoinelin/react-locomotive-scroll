@@ -1,3 +1,10 @@
+## [0.1.7](https://github.com/toinelin/react-locomotive-scroll/compare/0.1.6...0.1.7) (2021-02-19)
+
+
+### Reverts
+
+* **build:** add tslib to paths + re-use target es2015 ([4eeb853](https://github.com/toinelin/react-locomotive-scroll/commit/4eeb853efabed59fe923aaba710bca124b4633b9))
+
 ## [0.1.6](https://github.com/toinelin/react-locomotive-scroll/compare/0.1.5...0.1.6) (2021-02-19)
 
 
