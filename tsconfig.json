@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "module": "CommonJS",
     "moduleResolution": "Node",
-    "target": "ESNext",
+    "target": "ES2015",
     "importHelpers": true,
     "jsx": "react-jsx",
     "lib": [
@@ -28,7 +28,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "*": ["*"]
+      "*": ["*"],
+      "tslib": ["node_modules/tslib"]
     }
   },
   "include": [
