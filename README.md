@@ -43,20 +43,20 @@
   </ol>
 </details>
 
-
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
 ### Installation
+
 ```sh
-$ npm install react-locomotive-scroll
+$ npm install locomotive-scroll react-locomotive-scroll
 ```
 
 or using [Yarn](https://yarnpkg.com/)
 
 ```sh
-$ yarn add react-locomotive-scroll
+$ yarn add locomotive-scroll react-locomotive-scroll
 ```
 
 
