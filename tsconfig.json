@@ -13,15 +13,14 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "target": "es5",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
     "importHelpers": true,
     "jsx": "react-jsx",
     "lib": [
-      "dom",
-      "es5",
-      "es6"
+      "DOM",
+      "ESNext"
     ],
     "typeRoots" : [
       "./node_modules/@types",
