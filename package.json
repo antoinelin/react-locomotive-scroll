@@ -44,6 +44,7 @@
     ]
   },
   "dependencies": {
+    "use-debounce": "^6.0.1",
     "use-resize-observer": "6.1.0"
   },
   "devDependencies": {
