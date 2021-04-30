@@ -64,12 +64,12 @@ $ yarn add locomotive-scroll react-locomotive-scroll
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Import the provider
+### 1. Import the provider
 ```js
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 ```
 
-Wrap your application using the provider
+### 2. Wrap your application using the provider
 ```js
 const containerRef = useRef(null)
 
@@ -93,7 +93,7 @@ const containerRef = useRef(null)
 </LocomotiveScrollProvider>
 ```
 
-Wrap your pages using `data-scroll-section` to prevent weird behaviours
+### 3. Wrap your pages using `data-scroll-section` to prevent weird behaviours
 
 ```js
 export function Page() {
@@ -105,7 +105,11 @@ export function Page() {
 }
 ```
 
-Get the scroll instance through all your components
+### 4. Add the base styles to your CSS file.
+
+[`locomotive-scroll.css`](https://github.com/locomotivemtl/locomotive-scroll/blob/master/dist/locomotive-scroll.css)
+
+### 5. Get the scroll instance through all your components
 ```js
 import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
