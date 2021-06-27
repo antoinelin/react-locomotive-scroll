@@ -25,23 +25,22 @@
 
 
 <!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
+<summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+<ol>
+  <li>
+    <a href="#getting-started">Getting Started</a>
+    <ul>
+      <li><a href="#prerequisites">Prerequisites</a></li>
+      <li><a href="#installation">Installation</a></li>
+    </ul>
+  </li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#usage">Specific cases</a></li>
+  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#license">License</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#acknowledgements">Acknowledgements</a></li>
+</ol>
 
 ## Getting Started
 
@@ -123,6 +122,43 @@ export function Component() {
 At this time you should be able to do whatever your want using the scroll object.
 
 For more examples and to use Locomotive Scroll, please refer to their [Documentation](https://github.com/locomotivemtl/locomotive-scroll)
+
+## Specific cases
+
+### 1. Apply code to the location update only
+
+If you want to write some code applied only when the location change but not when the rest of your dependencies added to the `watch` list change, here the thing:
+
+First, remove the location props from the `watch` dependencies list and add it to the `location` props.
+
+> `react-locomotive-scroll` will update the scroll instance as it should, but in a different `useEffect` than the one used to update watched dependencies
+
+```js
+const { pathname } = useLocation() // With react-router
+const { asPath } = useRouter() // With next/router
+
+<LocomotiveScrollProvider
+  options={
+    {
+      smooth: true,
+      // ... all available Locomotive Scroll instance options 
+    }
+  }
+  watch={
+    [
+      //...all the dependencies you want to watch to update the scroll EXCEPT the location one
+    ]
+  }
+  location={asPath}
+  containerRef={containerRef}
+  onLocationChange={scroll => scroll.scrollTo(0, { duration: 0, disableLerp: true })} // If you want to reset the scroll position to 0 for example
+  onUpdate={() => console.log('Updated, but not on location change!')} // Will trigger on 
+>
+  <main data-scroll-container ref={containerRef}>
+    {/* ...your app */}
+  </main>
+</LocomotiveScrollProvider>
+```
 
 <!-- CONTRIBUTING -->
 ## Contributing

@@ -17,6 +17,9 @@ export interface LocomotiveScrollProviderProps {
   options: LocomotiveScrollOptions
   containerRef: MutableRefObject<HTMLDivElement | null>
   watch: DependencyList | undefined
+  onUpdate?: (scroll: Scroll) => void
+  location?: string
+  onLocationChange?: (scroll: Scroll) => void
 }
 
 export function LocomotiveScrollProvider({
@@ -24,6 +27,9 @@ export function LocomotiveScrollProvider({
   options,
   containerRef,
   watch,
+  onUpdate,
+  location,
+  onLocationChange,
 }: WithChildren<LocomotiveScrollProviderProps>) {
   const { height: containerHeight } = useResizeObserver<HTMLDivElement>({ ref: containerRef })
   const [isReady, setIsReady] = useState(false)
@@ -68,10 +74,30 @@ export function LocomotiveScrollProvider({
 
   useEffect(
     () => {
-      LocomotiveScrollRef.current?.update()
+      if (!LocomotiveScrollRef.current) {
+        return
+      }
+
+      LocomotiveScrollRef.current.update()
+
+      if (onUpdate) {
+        onUpdate(LocomotiveScrollRef.current)
+      }
     },
     watch ? [...watch, height] : [height]
   )
+
+  useEffect(() => {
+    if (!LocomotiveScrollRef.current || !location) {
+      return
+    }
+
+    LocomotiveScrollRef.current.update()
+
+    if (onLocationChange) {
+      onLocationChange(LocomotiveScrollRef.current)
+    }
+  }, [location])
 
   return (
     <LocomotiveScrollContext.Provider value={{ scroll: LocomotiveScrollRef.current, isReady }}>
