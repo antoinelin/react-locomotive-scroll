@@ -179,11 +179,13 @@ declare module 'locomotive-scroll' {
     stop(): void
     scrollTo(
       target: Node | string | number,
-      offset?: number,
-      duration?: number,
-      easing?: [number, number, number, number],
-      disableLerp?: boolean,
-      callback?: () => void
+      options: {
+        offset?: number
+        callback?: () => void
+        duration?: number
+        easing?: [number, number, number, number]
+        disableLerp?: boolean
+      }
     ): void
     setScroll(x: number, y: number): void
     on(event: 'call' | 'scroll', func: (data: string | string[]) => void): void
