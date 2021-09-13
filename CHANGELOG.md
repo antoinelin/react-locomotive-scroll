@@ -1,3 +1,20 @@
+# [0.2.0](https://github.com/toinelin/react-locomotive-scroll/compare/0.1.8...0.2.0) (2021-09-13)
+
+
+### Bug Fixes
+
+* **update-react-version:** update React version from 17.0.1 to ^17.0.2 ([bd77ddd](https://github.com/toinelin/react-locomotive-scroll/commit/bd77ddd3540563f5f548019014314566fda3a671)), closes [#14](https://github.com/toinelin/react-locomotive-scroll/issues/14)
+
+
+### Features
+
+* **provider:** add onUpdate, location and onLocationChange props ([83ffcfd](https://github.com/toinelin/react-locomotive-scroll/commit/83ffcfd529edaeac27b03fbb6825bcf29d5a64a2)), closes [#9](https://github.com/toinelin/react-locomotive-scroll/issues/9)
+
+
+### Reverts
+
+* **package-verison:** removes package version bump ([773087f](https://github.com/toinelin/react-locomotive-scroll/commit/773087ff872d7df2d10107355f870b88aa59e880))
+
 ## [0.1.8](https://github.com/toinelin/react-locomotive-scroll/compare/0.1.7...0.1.8) (2021-04-30)
 
 ## [0.1.7](https://github.com/toinelin/react-locomotive-scroll/compare/0.1.6...0.1.7) (2021-02-19)
