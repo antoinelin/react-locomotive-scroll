@@ -81,7 +81,9 @@ const containerRef = useRef(null)
   }
   watch={
     [
-      //...all the dependencies you want to watch to update the scroll
+      //..all the dependencies you want to watch to update the scroll.
+      //  Basicaly, you would want to watch page/location changes
+      //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
     ]
   }
   containerRef={containerRef}
@@ -103,6 +105,9 @@ export function Page() {
   )
 }
 ```
+
+From the Locomotive Scroll doc : `Defines a scrollable section. Splitting your page into sections may improve performance.`
+You may want to use `data-scroll-section` on each page which may be wrapped by `LocomotiveScrollProvider`
 
 ### 4. Add the base styles to your CSS file.
 
