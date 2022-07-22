@@ -23,7 +23,8 @@
     "lint": "eslint --quiet",
     "format": "prettier --debug-check lib/**/*.{ts,tsx}",
     "prepare": "yarn lint && yarn format && yarn build",
-    "release": "dotenv release-it --"
+    "release": "dotenv release-it --",
+    "pre-release": "dotenv release-it --preRelease=beta --"
   },
   "husky": {
     "hooks": {

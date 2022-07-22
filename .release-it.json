@@ -1,6 +1,5 @@
 {
   "git": {
-    "requireBranch": "main",
     "requireCommits": true,
     "requireCleanWorkingDir": false,
     "addFiles": ["package.json", "CHANGELOG.md"]
