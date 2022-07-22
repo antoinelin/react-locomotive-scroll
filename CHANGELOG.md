@@ -1,3 +1,12 @@
+
+
+## [0.2.2](https://github.com/toinelin/react-locomotive-scroll/compare/0.2.1...0.2.2) (2022-07-22)
+
+
+### Bug Fixes
+
+* pre-release command ([a12b653](https://github.com/toinelin/react-locomotive-scroll/commit/a12b653b2f24b6a01f81ef4b25038c25cc6ba6d7))
+
 ## [0.2.1](https://github.com/toinelin/react-locomotive-scroll/compare/0.2.0...0.2.1) (2022-07-22)
 
 # [0.2.0](https://github.com/toinelin/react-locomotive-scroll/compare/0.1.8...0.2.0) (2021-09-13)
@@ -64,4 +73,3 @@
 ### Reverts
 
 * **use-resize-observer:** finaly force the use of observer to avoid weird behaviours ([3ac0e7e](https://github.com/toinelin/react-locomotive-scroll/commit/3ac0e7eee2d28a0613fa958fdba80f254d8f9c30))
-
