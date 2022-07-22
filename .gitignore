@@ -106,3 +106,5 @@ dist
 .DS_Store
 
 module/
+.husky
+.DS_Store
