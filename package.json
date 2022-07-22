@@ -24,7 +24,7 @@
     "format": "prettier --debug-check lib/**/*.{ts,tsx}",
     "prepare": "yarn lint && yarn format && yarn build",
     "release": "dotenv release-it --",
-    "pre-release": "dotenv release-it --preRelease=beta --"
+    "pre-release": "dotenv release-it --preRelease=beta --no-git.requireUpstream --"
   },
   "husky": {
     "hooks": {
