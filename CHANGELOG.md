@@ -1,3 +1,5 @@
+## [0.2.1](https://github.com/toinelin/react-locomotive-scroll/compare/0.2.0...0.2.1) (2022-07-22)
+
 # [0.2.0](https://github.com/toinelin/react-locomotive-scroll/compare/0.1.8...0.2.0) (2021-09-13)
 
 
