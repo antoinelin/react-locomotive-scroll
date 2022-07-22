@@ -27,7 +27,7 @@
     "pre-commit": "yarn lint && yarn format && lint-staged",
     "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
     "release": "dotenv release-it --",
-    "pre-release": "dotenv release-it --preRelease=beta --"
+    "pre-release": "dotenv release-it major --preRelease=beta --"
   },
   "config": {
     "commitizen": {
