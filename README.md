@@ -132,7 +132,7 @@ For more examples and to use Locomotive Scroll, please refer to their [Documenta
 
 ### 1. Apply code to the location update only
 
-If you want to write some code applied only when the location change but not when the rest of your dependencies added to the `watch` list change, here the thing:
+If you want to write some code that is only executed when the location changes, but not when the rest of your dependencies in the `watch` list change, here's how:
 
 First, remove the location props from the `watch` dependencies list and add it to the `location` props.
 
